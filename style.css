@@ -1,6 +1,12 @@
-/* =========================
+/* ========================================
+   EXPLORE WITH HIRA
+   PROFESSIONAL COUNTRY EXPLORER
+======================================== */
+
+
+/* ========================================
    RESET
-========================= */
+======================================== */
 
 * {
     margin: 0;
@@ -9,57 +15,146 @@
 }
 
 
-/* =========================
+/* ========================================
    BODY
-========================= */
+======================================== */
 
 body {
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #5b4a5f;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #493c50;
+
     overflow-x: hidden;
 
     background:
         radial-gradient(
-            circle at 10% 20%,
-            #ffe0ed 0%,
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            #eadcff 0%,
+            circle at 5% 10%,
+            rgba(255, 190, 215, 0.55),
             transparent 30%
         ),
+
+        radial-gradient(
+            circle at 95% 85%,
+            rgba(215, 195, 255, 0.55),
+            transparent 32%
+        ),
+
         linear-gradient(
             135deg,
-            #fff5f9,
-            #fffafd,
-            #f8f0ff
+            #fff8fb 0%,
+            #fffafd 50%,
+            #f8f4ff 100%
         );
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* ========================================
+   DECORATIVE ELEMENTS
+======================================== */
 
-.hero {
-    text-align: center;
-    padding: 85px 20px 45px;
-    position: relative;
-    z-index: 2;
+.decor {
+    position: fixed;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    user-select: none;
 }
 
 
-/* =========================
+.airplane-left {
+    top: 90px;
+    left: 7%;
+
+    font-size: 38px;
+
+    color: #d9789b;
+
+    transform: rotate(-20deg);
+
+    animation: airplaneMove 4s ease-in-out infinite;
+}
+
+
+.heart-left {
+    top: 180px;
+    left: 4%;
+
+    font-size: 45px;
+
+    color: #e08bab;
+
+    opacity: 0.7;
+}
+
+
+.cloud-left {
+    bottom: -20px;
+    left: -20px;
+
+    font-size: 125px;
+
+    color: #f2dce8;
+
+    opacity: 0.6;
+}
+
+
+.cloud-right {
+    right: -20px;
+    bottom: -20px;
+
+    font-size: 135px;
+
+    color: #e8ddf7;
+
+    opacity: 0.7;
+}
+
+
+.bird-right {
+    top: 130px;
+    right: 7%;
+
+    font-size: 55px;
+
+    color: #cdb6e6;
+
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 75px 20px 35px;
+}
+
+
+/* ========================================
    TITLE
-========================= */
+======================================== */
 
 .hero-title {
     display: flex;
-    justify-content: center;
+
     align-items: center;
-    gap: 18px;
+
+    justify-content: center;
+
+    gap: 17px;
+
     flex-wrap: wrap;
 }
 
@@ -67,21 +162,34 @@ body {
 /* Explore */
 
 .explore-text {
-    font-family: "Brush Script MT", "Segoe Script", cursive;
-    font-size: 88px;
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 86px;
+
     font-weight: bold;
+
     font-style: italic;
-    color: #c64f7d;
-    text-shadow: 0 5px 15px rgba(198, 79, 125, 0.12);
+
+    color: #c75580;
+
+    text-shadow:
+        0 7px 20px rgba(199, 85, 128, 0.15);
 }
 
 
 /* With */
 
 .with-text {
-    font-family: "Segoe Script", cursive;
-    font-size: 42px;
-    color: #604f67;
+    font-family:
+        "Segoe Script",
+        cursive;
+
+    font-size: 40px;
+
+    color: #65556b;
 }
 
 
@@ -90,14 +198,21 @@ body {
 .hira-text {
     position: relative;
 
-    font-family: "Brush Script MT", "Segoe Script", cursive;
-    font-size: 88px;
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 86px;
+
     font-weight: bold;
+
     font-style: italic;
 
-    color: #d35b87;
+    color: #d15b88;
 
-    text-shadow: 0 5px 15px rgba(211, 91, 135, 0.15);
+    text-shadow:
+        0 7px 20px rgba(209, 91, 136, 0.15);
 }
 
 
@@ -105,17 +220,20 @@ body {
 
 .hira-text::after {
     content: "";
+
     position: absolute;
 
     left: 5px;
     right: 5px;
-    bottom: -8px;
+
+    bottom: -7px;
 
     height: 5px;
 
-    background: #d35b87;
+    background: #d15b88;
 
     border-radius: 50%;
+
     transform: rotate(-2deg);
 }
 
@@ -123,166 +241,204 @@ body {
 /* Globe */
 
 .globe {
-    font-size: 75px;
     display: inline-block;
 
-    animation: floatingGlobe 3s ease-in-out infinite;
+    font-size: 70px;
+
+    animation:
+        floatingGlobe 3s ease-in-out infinite;
 }
 
 
-/* =========================
-   UNDERLINE
-========================= */
+/* ========================================
+   HERO UNDERLINE
+======================================== */
 
 .underline {
-    color: #d35b87;
+    margin-top: 5px;
+
     font-size: 20px;
-    margin-top: 2px;
-    opacity: 0.8;
+
+    color: #d15b88;
+
+    opacity: 0.75;
 }
 
 
-/* =========================
+/* ========================================
    TAGLINE
-========================= */
+======================================== */
 
 .tagline {
     margin-top: 18px;
 
-    font-size: 23px;
-    letter-spacing: 0.5px;
-
-    color: #65576b;
-}
-
-
-/* =========================
-   LITTLE HEART
-========================= */
-
-.little-heart {
-    margin-top: 22px;
-
-    color: #d45b88;
-
     font-size: 22px;
 
-    letter-spacing: 8px;
+    letter-spacing: 0.5px;
+
+    color: #675a6d;
 }
 
 
-/* =========================
-   SEARCH CONTAINER
-========================= */
+/* ========================================
+   LITTLE HEART
+======================================== */
+
+.little-heart {
+    margin-top: 20px;
+
+    font-size: 21px;
+
+    letter-spacing: 7px;
+
+    color: #d25c88;
+}
+
+
+/* ========================================
+   SEARCH AREA
+======================================== */
 
 .search-container {
+    position: relative;
+
+    z-index: 3;
+
     width: 90%;
+
     max-width: 1150px;
 
-    margin: 25px auto 0;
+    margin: 30px auto 0;
 
-    padding: 20px;
+    padding: 18px;
 
     display: flex;
+
     align-items: center;
-    gap: 20px;
 
-    background: rgba(255, 255, 255, 0.78);
+    gap: 18px;
 
-    border-radius: 45px;
+    background:
+        rgba(255, 255, 255, 0.82);
 
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    border:
+        1px solid rgba(255, 255, 255, 0.95);
+
+    border-radius: 50px;
 
     box-shadow:
-        0 20px 50px rgba(190, 110, 150, 0.12);
+        0 20px 55px rgba(174, 99, 137, 0.13);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(18px);
 }
 
 
-/* =========================
-   INPUT
-========================= */
+/* ========================================
+   INPUT WRAPPER
+======================================== */
 
 .search-input-wrapper {
     flex: 1;
 
-    height: 72px;
+    height: 70px;
 
     display: flex;
+
     align-items: center;
-
-    border: 3px solid #f2d7e3;
-
-    border-radius: 40px;
 
     background: #ffffff;
 
-    transition: 0.3s;
+    border:
+        2px solid #f1d8e3;
+
+    border-radius: 40px;
+
+    transition: all 0.3s ease;
 }
 
 
 .search-input-wrapper:focus-within {
-    border-color: #dc7199;
+    border-color: #d9789b;
 
     box-shadow:
-        0 0 0 5px rgba(220, 113, 153, 0.10);
+        0 0 0 5px rgba(217, 120, 155, 0.10);
 }
 
 
-/* Location icon */
+/* ========================================
+   LOCATION ICON
+======================================== */
 
 .location-icon {
-    width: 58px;
-    height: 58px;
+    width: 55px;
 
-    margin-left: 6px;
+    height: 55px;
+
+    margin-left: 7px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
+    flex-shrink: 0;
 
     border-radius: 50%;
 
-    background: #ffe8f0;
+    background: #ffeaf1;
 
-    font-size: 25px;
+    font-size: 24px;
 }
 
 
-/* Input */
+/* ========================================
+   INPUT
+======================================== */
 
 .search-input-wrapper input {
     flex: 1;
 
+    width: 100%;
+
     height: 100%;
 
-    padding: 0 22px;
+    padding:
+        0 20px;
 
     border: none;
+
     outline: none;
 
     background: transparent;
 
-    font-size: 20px;
+    color: #514354;
 
-    color: #5b4a5f;
+    font-size: 19px;
 }
 
 
 .search-input-wrapper input::placeholder {
-    color: #a99aa9;
+    color: #aa9cae;
 }
 
 
-/* =========================
+/* ========================================
    SEARCH BUTTON
-========================= */
+======================================== */
 
 #search-btn {
-    height: 72px;
+    height: 58px;
 
-    padding: 0 42px;
+    padding: 0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
 
     border: none;
 
@@ -291,26 +447,24 @@ body {
     background:
         linear-gradient(
             135deg,
-            #e276a0,
-            #c94f7c
+            #e27ba4,
+            #c9527f
         );
 
     color: white;
 
-    font-size: 20px;
+    font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
     box-shadow:
-        0 12px 25px rgba(201, 79, 124, 0.20);
+        0 10px 24px rgba(201, 82, 127, 0.22);
 
-    transition: 0.3s;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
@@ -318,7 +472,7 @@ body {
     transform: translateY(-3px);
 
     box-shadow:
-        0 16px 30px rgba(201, 79, 124, 0.28);
+        0 15px 30px rgba(201, 82, 127, 0.30);
 }
 
 
@@ -328,222 +482,236 @@ body {
 
 
 .search-icon {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
-/* =========================
-   ERROR
-========================= */
+/* ========================================
+   ERROR MESSAGE
+======================================== */
 
 #error-message {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 20px auto 0;
+
     text-align: center;
 
-    margin-top: 22px;
+    font-size: 16px;
 
-    font-size: 17px;
-
-    color: #c84f72;
+    color: #c34e70;
 }
 
 
-/* =========================
+/* ========================================
    COUNTRY RESULT
-========================= */
+======================================== */
 
 #country-result {
-    width: 90%;
-    max-width: 1050px;
+    position: relative;
 
-    margin: 40px auto 80px;
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 40px auto 90px;
 }
 
 
-/* =========================
+/* ========================================
    COUNTRY CARD
-========================= */
+======================================== */
 
 .country-card {
     display: grid;
 
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 420px 1fr;
 
-    gap: 45px;
+    gap: 50px;
 
-    padding: 38px;
+    padding: 40px;
 
-    background: rgba(255, 255, 255, 0.92);
+    background:
+        rgba(255, 255, 255, 0.94);
 
-    border-radius: 30px;
+    border:
+        1px solid #f2dce6;
+
+    border-radius: 32px;
 
     box-shadow:
-        0 25px 60px rgba(190, 110, 150, 0.15);
+        0 25px 65px rgba(170, 95, 135, 0.15);
 
-    border: 1px solid #f3dfe8;
-
-    animation: cardShow 0.6s ease;
+    animation:
+        cardShow 0.6s ease;
 }
 
 
-/* =========================
-   FLAG
-========================= */
+/* ========================================
+   FLAG AREA
+======================================== */
 
-.country-card img {
-    width: 100%;
-    height: 280px;
+.country-card > div:first-child {
+    min-height: 300px;
 
-    object-fit: cover;
+    display: flex;
 
-    border-radius: 22px;
+    align-items: center;
 
-    box-shadow:
-        0 12px 30px rgba(80, 50, 70, 0.12);
+    justify-content: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #f5edff
+        );
+
+    overflow: hidden;
 }
 
 
-/* =========================
-   COUNTRY INFO
-========================= */
+/* ========================================
+   FLAG EMOJI
+======================================== */
+
+.country-flag {
+    font-size: 150px;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 15px 20px
+            rgba(80, 50, 70, 0.12)
+        );
+
+    animation:
+        flagShow 0.7s ease;
+}
+
+
+/* ========================================
+   COUNTRY INFORMATION
+======================================== */
 
 .country-info {
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
 
+/* Country Name */
+
 .country-info h2 {
-    font-size: 44px;
+    margin-bottom: 28px;
+
+    font-size: 46px;
 
     color: #c6537d;
 
-    margin-bottom: 25px;
+    letter-spacing: -1px;
 }
 
 
+/* Information */
+
 .country-info p {
-    font-size: 19px;
+    margin-bottom: 13px;
 
-    color: #625467;
+    padding-bottom: 13px;
 
-    margin-bottom: 14px;
+    font-size: 18px;
 
-    padding-bottom: 10px;
+    color: #65586a;
 
-    border-bottom: 1px solid #f2e4ea;
+    border-bottom:
+        1px solid #f1e3e9;
 }
 
 
 .country-info strong {
-    color: #3f3342;
+    color: #413542;
 }
 
 
-/* =========================
-   DECORATIONS
-========================= */
+/* ========================================
+   HOVER EFFECT
+======================================== */
 
-.decor {
-    position: fixed;
-
-    z-index: 1;
-
-    pointer-events: none;
-
-    color: #df7199;
+.country-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
-.airplane-left {
-    top: 90px;
-    left: 8%;
+.country-card:hover {
+    transform: translateY(-5px);
 
-    font-size: 38px;
-
-    transform: rotate(-20deg);
-
-    animation: airplaneMove 4s ease-in-out infinite;
+    box-shadow:
+        0 30px 75px rgba(170, 95, 135, 0.20);
 }
 
 
-.heart-left {
-    top: 160px;
-    left: 4%;
-
-    font-size: 45px;
-}
-
-
-.cloud-left {
-    bottom: 15px;
-    left: -15px;
-
-    font-size: 120px;
-
-    color: #f5d8e7;
-
-    opacity: 0.55;
-}
-
-
-.cloud-right {
-    bottom: 10px;
-    right: -15px;
-
-    font-size: 130px;
-
-    color: #eadbfa;
-
-    opacity: 0.65;
-}
-
-
-.bird-right {
-    top: 120px;
-    right: 7%;
-
-    font-size: 55px;
-
-    color: #dcb7f1;
-}
-
-
-/* =========================
+/* ========================================
    ANIMATIONS
-========================= */
+======================================== */
 
 @keyframes floatingGlobe {
 
     0% {
-        transform: translateY(0);
+        transform:
+            translateY(0)
+            rotate(0deg);
     }
 
     50% {
-        transform: translateY(-10px);
+        transform:
+            translateY(-10px)
+            rotate(5deg);
     }
 
     100% {
-        transform: translateY(0);
+        transform:
+            translateY(0)
+            rotate(0deg);
     }
-
 }
 
 
 @keyframes airplaneMove {
 
     0% {
-        transform: translate(0, 0) rotate(-20deg);
+        transform:
+            translate(0, 0)
+            rotate(-20deg);
     }
 
     50% {
-        transform: translate(15px, -8px) rotate(-15deg);
+        transform:
+            translate(15px, -8px)
+            rotate(-15deg);
     }
 
     100% {
-        transform: translate(0, 0) rotate(-20deg);
+        transform:
+            translate(0, 0)
+            rotate(-20deg);
     }
-
 }
 
 
@@ -551,7 +719,798 @@ body {
 
     from {
         opacity: 0;
-        transform: translateY(25px);
+
+        transform:
+            translateY(30px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes flagShow {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.7)
+            rotate(-5deg);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(0);
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .explore-text,
+    .hira-text {
+        font-size: 68px;
+    }
+
+
+    .with-text {
+        font-size: 34px;
+    }
+
+
+    .globe {
+        font-size: 58px;
+    }
+
+
+    .country-card {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .country-card > div:first-child {
+        min-height: 260px;
+    }
+
+
+    .country-flag {
+        font-size: 130px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding:
+            55px 15px 30px;
+    }
+
+
+    .hero-title {
+        gap: 7px;
+    }
+
+
+    .explore-text,
+    .hira-text {
+        font-size: 53px;
+    }
+
+
+    .with-text {
+        font-size: 27px;
+    }
+
+
+    .globe {
+        font-size: 45px;
+    }
+
+
+    .tagline {
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+
+    .search-container {
+        flex-direction: column;
+
+        padding: 14px;
+
+        border-radius: 27px;
+    }
+
+
+    .search-input-wrapper {
+        width: 100%;
+
+        height: 65px;
+    }
+
+
+    #search-btn {
+        width: 100%;
+
+        height: 65px;
+    }
+
+
+    #country-result {
+        width: 92%;
+    }
+
+
+    .country-card {
+        padding: 22px;
+
+        border-radius: 25px;
+    }
+
+
+    .country-card > div:first-child {
+        min-height: 210px;
+
+        border-radius: 20px;
+    }
+
+
+    .country-flag {
+        font-size: 105px;
+    }
+
+
+    .country-info h2 {
+        font-size: 34px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .country-info p {
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+
+    .airplane-left,
+    .heart-left,
+    .bird-right {
+        display: none;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+    .explore-text,
+    .hira-text {
+        font-size: 43px;
+    }
+
+
+    .with-text {
+        font-size: 22px;
+    }
+
+
+    .globe {
+        font-size: 38px;
+    }
+
+
+    .location-icon {
+        width: 47px;
+
+        height: 47px;
+
+        font-size: 20px;
+    }
+
+
+    .search-input-wrapper input {
+        font-size: 16px;
+
+        padding:
+            0 12px;
+    }
+
+
+    .country-card {
+        padding: 18px;
+    }
+}
+
+/* ========================================
+   PROFESSIONAL COUNTRY CARD
+======================================== */
+
+
+/* COUNTRY VISUAL */
+
+.country-visual {
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #f5edff
+        );
+
+    border: 1px solid #f2dce8;
+}
+
+
+/* FLAG */
+
+.country-visual .country-flag {
+    font-size: 150px;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 15px 20px
+            rgba(80, 50, 70, 0.12)
+        );
+
+    animation: flagShow 0.7s ease;
+}
+
+
+/* ========================================
+   FLAG PREMIUM SHINE EFFECT
+======================================== */
+
+.country-visual .country-flag {
+    position: relative;
+}
+
+/* Soft shine */
+.country-visual .country-flag::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+/* Shine animation when hovering */
+.country-visual .country-flag:hover::after {
+    animation: flagShine 0.8s ease;
+}
+
+@keyframes flagShine {
+
+    from {
+        left: -80%;
+    }
+
+    to {
+        left: 140%;
+    }
+
+}
+
+/* FLAG LABEL */
+
+.flag-label {
+    margin-top: 22px;
+    padding: 11px 24px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #f2dce8;
+
+    color: #b95178;
+
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    box-shadow: 0 10px 25px rgba(180, 90, 130, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+/* ========================================
+   FLAG + COUNTRY NAME SPACING
+======================================== */
+
+.country-visual {
+    gap: 0;
+}
+
+.country-visual .country-flag {
+    margin-bottom: 0;
+}
+
+.flag-label {
+    position: relative;
+    z-index: 2;
+}
+
+/* Better spacing on small screens */
+@media (max-width: 650px) {
+
+    .flag-label {
+        margin-top: 18px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+}
+
+/* ========================================
+   FLAG SOFT GLOW
+======================================== */
+
+.country-visual .country-flag {
+    box-shadow:
+        0 18px 35px rgba(80, 50, 70, 0.16),
+        0 0 35px rgba(217, 120, 152, 0.12);
+}
+
+.country-visual .country-flag:hover {
+    box-shadow:
+        0 25px 45px rgba(80, 50, 70, 0.20),
+        0 0 45px rgba(217, 120, 152, 0.20);
+}
+
+.flag-label:hover {
+    transform: translateY(-3px);
+
+    background: #fff7fa;
+
+    box-shadow: 0 14px 30px rgba(180, 90, 130, 0.17);
+}
+
+
+/* ========================================
+   COUNTRY HEADING
+======================================== */
+
+.country-heading {
+    margin-bottom: 25px;
+}
+
+
+.small-label {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #c96a8c;
+}
+
+
+.country-heading h2 {
+    margin: 0;
+
+    font-size: 45px;
+
+    color: #c6537d;
+}
+
+
+/* ========================================
+   INFORMATION GRID
+======================================== */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   INFO BOX
+======================================== */
+
+.info-box {
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px;
+
+    border:
+        1px solid #f1e0e7;
+
+    border-radius: 16px;
+
+    background: #fffafd;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.info-box:hover {
+    transform: translateY(-3px);
+
+    border-color: #e8bfd0;
+
+    box-shadow:
+        0 10px 25px
+        rgba(190, 100, 140, 0.10);
+}
+
+
+/* ========================================
+   INFO ICON
+======================================== */
+
+.info-icon {
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #ffeaf2;
+
+    font-size: 20px;
+}
+
+
+/* ========================================
+   INFO TEXT
+======================================== */
+
+.info-box div {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.info-box small {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #9b899b;
+}
+
+
+.info-box strong {
+    font-size: 14px;
+
+    color: #4b3d4e;
+
+    word-break: break-word;
+}
+
+
+/* ========================================
+   MAP BUTTON
+======================================== */
+
+.map-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e277a0,
+            #c7537e
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px
+        rgba(199, 83, 126, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.map-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(199, 83, 126, 0.27);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .country-visual {
+        min-height: 260px;
+    }
+
+    .country-visual .country-flag {
+        font-size: 125px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .country-visual {
+        min-height: 220px;
+
+        padding: 20px;
+    }
+
+    .country-visual .country-flag {
+        font-size: 100px;
+    }
+
+    .country-heading h2 {
+        font-size: 34px;
+    }
+
+    .flag-label {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ========================================
+   FLAG ANIMATION
+======================================== */
+
+@keyframes flagShow {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.7)
+            rotate(-5deg);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+/* ========================================
+   COUNTRY DROPDOWN
+======================================== */
+
+.search-input-wrapper {
+    position: relative;
+}
+
+
+.country-dropdown-btn {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #fff0f5;
+    color: #c6537d;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.country-dropdown-btn:hover {
+    background: #f5dce5;
+    transform: translateY(-50%) scale(1.05);
+}
+
+
+/* Dropdown Box */
+
+.country-dropdown {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+
+    max-height: 300px;
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dce3;
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 40px rgba(185, 86, 120, 0.15);
+
+    padding: 8px;
+
+    z-index: 1000;
+
+    display: none;
+}
+
+
+/* Show Dropdown */
+
+.country-dropdown.show {
+    display: block;
+    animation: dropdownShow 0.25s ease;
+}
+
+
+/* Country Option */
+
+.country-option {
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #4d454c;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.country-option:hover {
+    background: #fff0f4;
+    color: #c6537d;
+    transform: translateX(3px);
+}
+
+
+/* Scrollbar */
+
+.country-dropdown::-webkit-scrollbar {
+    width: 7px;
+}
+
+.country-dropdown::-webkit-scrollbar-track {
+    background: #fff9fb;
+    border-radius: 10px;
+}
+
+.country-dropdown::-webkit-scrollbar-thumb {
+    background: #e8bfd0;
+    border-radius: 10px;
+}
+
+
+/* Animation */
+
+@keyframes dropdownShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
     }
 
     to {
@@ -561,138 +1520,462 @@ body {
 
 }
 
+/* ========================================
+   CLEAR SEARCH BUTTON
+======================================== */
 
-/* =========================
-   TABLET
-========================= */
+.clear-country-btn {
+    position: absolute;
 
-@media (max-width: 900px) {
+    right: 58px;
+    top: 50%;
 
-    .explore-text,
-    .hira-text {
-        font-size: 68px;
-    }
+    transform: translateY(-50%);
 
-    .with-text {
-        font-size: 34px;
-    }
+    width: 30px;
+    height: 30px;
 
-    .globe {
-        font-size: 60px;
-    }
+    border: none;
+    border-radius: 50%;
 
-    .search-container {
-        border-radius: 30px;
-    }
+    background: #f5dce5;
+    color: #b95678;
 
-    .country-card {
-        grid-template-columns: 1fr;
-    }
+    font-size: 20px;
+    line-height: 1;
 
+    cursor: pointer;
+
+    display: none;
+
+    transition: 0.2s ease;
 }
 
 
-/* =========================
+.clear-country-btn:hover {
+    background: #eac3d2;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.explore-again-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px 20px;
+    border: 1px solid #f0dce3;
+    border-radius: 15px;
+    background: #fff;
+    color: #b95678;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.explore-again-btn:hover {
+    background: #fff0f4;
+    border-color: #e8bfd0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(185, 86, 120, 0.10);
+}
+
+/* ========================================
+   DARK MODE BUTTON
+======================================== */
+
+.theme-toggle {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 20px rgba(185, 86, 120, 0.12);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(185, 86, 120, 0.20);
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode {
+    background:
+        radial-gradient(
+            circle at top left,
+            #3b2635,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #29233b,
+            transparent 40%
+        ),
+        #18151b;
+
+    color: #f8edf2;
+}
+
+
+/* Hero */
+
+body.dark-mode .hero {
+    color: #fff;
+}
+
+
+/* Search Container */
+
+body.dark-mode .search-container {
+    background: rgba(45, 37, 47, 0.95);
+
+    border-color: #584653;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Search Input */
+
+body.dark-mode #country-input {
+    background: #29232d;
+
+    color: #fff;
+
+    border-color: #5b4a57;
+}
+
+body.dark-mode #country-input::placeholder {
+    color: #a99ba5;
+}
+
+
+/* Search Button */
+
+body.dark-mode #search-btn {
+    background: linear-gradient(
+        135deg,
+        #d97898,
+        #b95678
+    );
+
+    color: #fff;
+}
+
+
+/* Dropdown Button */
+
+body.dark-mode .country-dropdown-btn {
+    background: #3b2d38;
+
+    color: #f2a8c1;
+}
+
+
+/* Clear Button */
+
+body.dark-mode .clear-country-btn {
+    background: #493441;
+
+    color: #f3a8c1;
+}
+
+
+/* Country Dropdown */
+
+body.dark-mode .country-dropdown {
+    background: #29232d;
+
+    border-color: #51404c;
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Dropdown Options */
+
+body.dark-mode .country-option {
+    color: #eee3e9;
+}
+
+body.dark-mode .country-option:hover {
+    background: #3b2b36;
+
+    color: #f2a8c1;
+}
+
+
+/* Country Card */
+
+body.dark-mode .country-card {
+    background: #29232d;
+
+    border-color: #51404c;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Country Visual */
+
+body.dark-mode .country-visual {
+    background:
+        linear-gradient(
+            135deg,
+            #3a2934,
+            #302a3d
+        );
+
+    border-color: #51404c;
+}
+
+
+/* Flag Label */
+
+body.dark-mode .flag-label {
+    background: rgba(55, 43, 52, 0.90);
+
+    color: #f2a8c1;
+}
+
+
+/* Country Heading */
+
+body.dark-mode .small-label {
+    color: #e89ab5;
+}
+
+body.dark-mode .country-heading h2 {
+    color: #f0a4be;
+}
+
+
+/* Information Boxes */
+
+body.dark-mode .info-box {
+    background: #302832;
+
+    border-color: #4e404a;
+}
+
+body.dark-mode .info-box:hover {
+    background: #372d36;
+
+    border-color: #705363;
+}
+
+body.dark-mode .info-icon {
+    background: #46303d;
+}
+
+body.dark-mode .info-box small {
+    color: #aa9ba5;
+}
+
+body.dark-mode .info-box strong {
+    color: #eee3e9;
+}
+
+
+/* Map Button */
+
+body.dark-mode .map-button {
+    background: linear-gradient(
+        135deg,
+        #d97898,
+        #b95678
+    );
+}
+
+
+/* Explore Again Button */
+
+body.dark-mode .explore-again-btn {
+    background: #302832;
+
+    border-color: #574550;
+
+    color: #f0a4be;
+}
+
+body.dark-mode .explore-again-btn:hover {
+    background: #3b2d36;
+
+    border-color: #765565;
+}
+
+
+/* Error Message */
+
+body.dark-mode #error-message {
+    color: #f0a4be;
+}
+
+
+/* Dark Mode Toggle */
+
+body.dark-mode .theme-toggle {
+    background: #3b2d38;
+
+    border-color: #695462;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ========================================
    MOBILE
-========================= */
+======================================== */
 
 @media (max-width: 650px) {
 
-    .hero {
-        padding-top: 55px;
-    }
+    .theme-toggle {
+        top: 18px;
+        right: 18px;
 
-    .hero-title {
-        gap: 8px;
-    }
+        width: 42px;
+        height: 42px;
 
-    .explore-text,
-    .hira-text {
-        font-size: 55px;
-    }
-
-    .with-text {
-        font-size: 28px;
-    }
-
-    .globe {
-        font-size: 48px;
-    }
-
-    .tagline {
         font-size: 18px;
-        line-height: 1.5;
-    }
-
-    .search-container {
-        flex-direction: column;
-
-        padding: 15px;
-
-        border-radius: 25px;
-    }
-
-    .search-input-wrapper {
-        width: 100%;
-    }
-
-    #search-btn {
-        width: 100%;
-    }
-
-    .country-card {
-        padding: 22px;
-        gap: 25px;
-    }
-
-    .country-card img {
-        height: 220px;
-    }
-
-    .country-info h2 {
-        font-size: 34px;
-    }
-
-    .country-info p {
-        font-size: 16px;
-    }
-
-    .airplane-left,
-    .heart-left,
-    .bird-right {
-        display: none;
     }
 
 }
 
+/* ========================================
+   REAL COUNTRY FLAG IMAGE
+======================================== */
 
-/* =========================
-   SMALL MOBILE
-========================= */
+.country-visual .country-flag {
+    width: 220px;
+    height: 145px;
 
-@media (max-width: 400px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .explore-text,
-    .hira-text {
-        font-size: 45px;
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 30px rgba(80, 50, 70, 0.12);
+}
+
+.country-visual .country-flag img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .country-visual .country-flag {
+        width: 180px;
+        height: 120px;
     }
 
-    .with-text {
-        font-size: 23px;
+}
+
+/* ========================================
+   PROFESSIONAL FLAG IMAGE
+======================================== */
+
+.country-visual .country-flag {
+    width: 240px;
+    height: 155px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 6px solid #ffffff;
+    border-radius: 20px;
+
+    box-shadow:
+        0 18px 35px rgba(80, 50, 70, 0.16),
+        0 5px 12px rgba(80, 50, 70, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-visual .country-flag:hover {
+    transform: translateY(-5px) scale(1.02);
+
+    box-shadow:
+        0 25px 45px rgba(80, 50, 70, 0.20),
+        0 8px 18px rgba(80, 50, 70, 0.10);
+}
+
+.country-visual .country-flag img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ========================================
+   MOBILE FLAG
+======================================== */
+
+@media (max-width: 650px) {
+
+    .country-visual .country-flag {
+        width: 190px;
+        height: 125px;
+        border-radius: 16px;
+        border-width: 4px;
     }
 
-    .globe {
-        font-size: 40px;
-    }
+}
 
-    .location-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 20px;
-    }
+/* Move flag slightly upward */
 
-    .search-input-wrapper input {
-        font-size: 16px;
-    }
+.country-visual .country-flag {
+    transform: translateY(-12px);
+}
 
+.country-visual .country-flag:hover {
+    transform: translateY(-17px) scale(1.02);
 }
